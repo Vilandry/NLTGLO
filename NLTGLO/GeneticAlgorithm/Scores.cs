@@ -19,7 +19,7 @@ namespace NLTGLO.GeneticAlgorithm
         public const double PresidentChange = 1000;
         public const double SecretaryChange = 1000;
 
-        public const double PresidentWorkloadWorst = 30;
+        /*public const double PresidentWorkloadWorst = 30;
         public const double PresidentWorkloadWorse = 20;
         public const double PresidentWorkloadBad = 10;
 
@@ -30,7 +30,7 @@ namespace NLTGLO.GeneticAlgorithm
 
         public const double MemberWorkloadWorst = 30;
         public const double MemberWorkloadWorse = 20;
-        public const double MemberWorkloadBad = 10;
+        public const double MemberWorkloadBad = 10;*/
 
         public const double PresidentSelfStudent = 2;
         public const double SecretarySelfStudent = 1;

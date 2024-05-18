@@ -29,15 +29,15 @@ namespace NLTGLO.GeneticAlgorithm
                 GetSupervisorNotAvailableScore,
 
                 GetPresidentChangeScore,
-                GetSecretaryChangeScore,
+                GetSecretaryChangeScore,            
+
+                GetPresidentSelfStudentScore,
+                GetSecretarySelfStudentScore,
+                GetExaminerNotPresidentScore,
 
                 GetAvgDifference,
                 GetMinDifference,
                 GetMaxDifference,
-
-                GetPresidentSelfStudentScore,
-                GetSecretarySelfStudentScore,
-                GetExaminerNotPresidentScore
 
            };
         }

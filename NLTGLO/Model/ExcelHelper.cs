@@ -329,6 +329,8 @@ namespace NLTGLO.Model
                     int row = 7;
                     foreach (FieldInfo info in typeof(Scores).GetFields().Where(x => x.IsStatic && x.IsLiteral))
                     {
+                        if(info.Name.StartsWith("WorksAs")) { continue; } /// these are treated differently
+
                         ws_info.Cells[row, 4].Value = info.Name;
                         ws_info.Cells[row, 5].Value = info.GetValue(info);
                         ws_info.Cells[row, 6].Value = finalScores[row - 7];
@@ -336,6 +338,23 @@ namespace NLTGLO.Model
 
                         row++;
                     }
+
+                    /// Avg diff
+                    ws_info.Cells[row, 4].Value = "Avg difference";
+                    ws_info.Cells[row, 5].Value = Scores.WorksAsAnything;
+                    ws_info.Cells[row, 6].Value = finalScores[row - 7];
+                    row++;
+                    /// Avg diff
+                    ws_info.Cells[row, 4].Value = "Min difference";
+                    ws_info.Cells[row, 5].Value = Scores.WorksAsAnything;
+                    ws_info.Cells[row, 6].Value = finalScores[row - 7];
+                    row++;
+                    /// Avg diff
+                    ws_info.Cells[row, 4].Value = "Max difference";
+                    ws_info.Cells[row, 5].Value = Scores.WorksAsAnything;
+                    ws_info.Cells[row, 6].Value = finalScores[row - 7];
+                    row++;
+
 
                     ws_info.Cells[row + 1, 4].Value = "Time elapsed";
                     ws_info.Cells[row + 1, 5].Value = elapsed;
